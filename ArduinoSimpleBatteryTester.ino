@@ -3,7 +3,6 @@
 #define TERMINAL_VOLTAGE 0.2
 #define V_METER A0
 #define R_LOAD 1
-
 #define PIN_LED 9
 
 float voltage = 0;

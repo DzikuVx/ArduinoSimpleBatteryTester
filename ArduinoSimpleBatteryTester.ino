@@ -2,7 +2,7 @@
 
 #define TERMINAL_VOLTAGE 0.2
 #define V_METER A0
-#define R_LOAD 1
+#define R_LOAD 3.2
 #define PIN_LED 9
 
 float voltage = 0;
@@ -45,7 +45,7 @@ void loop() {
       
         float current = voltage / R_LOAD;
         joules += voltage * current;
-        float wattHours = joules / 3600;
+        float wattHours = (joules / 3600.0) * 1000.0;
       
         Serial.print(hours);
         Serial.print(":");

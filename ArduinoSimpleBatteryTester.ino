@@ -3,7 +3,7 @@
 #define TERMINAL_VOLTAGE 0.2
 #define V_METER A0
 #define R_LOAD 3.2
-#define PIN_LED 9
+#define PIN_LED 13
 
 float voltage = 0;
 float joules = 0;
@@ -20,6 +20,7 @@ bool testComplete = false;
 void setup() {                
   pinMode(V_METER, INPUT);
   pinMode(PIN_LED, OUTPUT);
+  digitalWrite(PIN_LED, LOW);
   Serial.begin(9600);
 }
 

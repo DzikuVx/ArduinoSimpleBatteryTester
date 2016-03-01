@@ -2,7 +2,7 @@
 
 #define TERMINAL_VOLTAGE 0.2
 #define V_METER A0
-#define R_LOAD 3.2
+#define R_LOAD 2.2
 #define PIN_LED 13
 
 float voltage = 0;
@@ -30,9 +30,7 @@ void loop() {
   
     if (testComplete) {
       digitalWrite(PIN_LED, LOW);
-    }else { 
-  
-      //Właściwa procedura testowa
+    }else {
       
       time_t t = now() - startTime; 
       uint8_t currentSecond = second(t);
@@ -71,8 +69,6 @@ void loop() {
       }
     }
   }else {
-    
-    //określ kiedy włączono baterię
     
     voltage = 5.0 * ((float) analogRead(V_METER)) / 1024.0;
     
